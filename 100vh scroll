@@ -1,0 +1,13 @@
+$(document).on('wheel', function(e) {
+  e.preventDefault();
+  $('html, body').stop(true).animate({
+    scrollTop: (e.originalEvent.deltaY > 0 ? '+=' : '-=') + $(window).height() + 'px'
+  });
+});
+
+body {
+  min-height: 300vh;
+  overflow: auto;
+}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
